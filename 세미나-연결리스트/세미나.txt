@@ -1,0 +1,68 @@
+- **data structure**
+    - **자료구조**
+    - cpu , hdd, ssd, memory
+    - 자료구조 효율적인 접근 및 수정을 가능하게 하는 자료의 조직, 관리, 저장
+    - 데이터 값의 모임, 데이터 간의 관계, 데이터에 적용 가능한 함수나 명령
+    - 구현
+        - 배열
+            - 가장 일반적인 구조이다. 메모리 상에 같은 타입의 자료가 연속적으로 저장된다. 자료값을 나타내는 가장 작은 단위가 자료를 다루는 단위이다.
+        - 튜플
+            - 둘 이상의 자료형을 묶음으로 다루는 구조이다.
+        - 연결 리스트
+            - 노드를 단위로 한다. 노드는 자료와 다음 노드를 가리키는 참조값으로 구성되어 있다. 노드가 다음 노드로 아무것도 가리키지 않으면 리스트의 끝이다.
+        - 원형 연결 리스트
+            - 각 노드는 다음 노드를 가리키고, 마지막 노드가 처음 노드를 가리키는 연결 리스트이다.
+        - 이중 연결 리스트
+            - 각 노드는 이전 노드와 다음 노드를 가리키는 참조값으로 구성된다. 처음 노드의 이전 노드와 마지막 노드의 다음 노드는 없다.
+        - 환형 이중 연결 리스트
+            - 처음 노드가 이전 노드로 마지막 노드를 가리키고, 마지막 노드가 다음 노드로 처음 노드를 가리키는 이중 연결 리스트이다.
+        - 해시 테이블
+            - 개체가 해시값에 따라 인덱싱된다.
+    - 형태
+        - 선형 구조
+            - 스택
+                - 스택 자료구조에 먼저 저장된 것이 꺼내어 쓸 때는 제일 나중에 나온다. 반대로, 가장 최근에 저장된 것이 꺼내어 쓸 때는 제일 먼저 나온다. 만약, 자료들의 나열 순서를 바꾸고 싶다면 스택에 집어 넣었다가 꺼내면 역순으로 바뀐다.
+            - 큐
+                - 스택과 반대로 큐 자료구조에 먼저 저장된 것이 제일 먼저 나온다. 반대로, 가장 나중에 저장된 것이 꺼내어 쓸 때는 가장 나중에 나온다.
+                - 환형 큐
+                    - 한정된 길이 안에서 부수적인 작업 없이 읽고 쓰기를 할 수 있는 큐이다.
+            - 덱
+                - 양쪽에서 넣기와 빼기를 할 수 있는 일반화된 선형 구조이다.
+        - 비선형 구조
+            - 그래프
+                - 유향 그래프, 무향 그래프
+            - 트리
+                - 이진트리
+                - 힙
+
+- **linked list와 arraylist의 차이**
+    - linked list
+        - Size : 반드시 Array 선언 시점에 지정
+        - 메모리 할당 : Heap에 Memory 할당
+        - 특징 : 각 elements가 위치한 곳이 다르다.
+        - 저장방식 : 새로운 elements는 memory 어딘가 저장되며 이때 elements는 linked list의 이전 node에 저장됨
+        - 삽입/삭제 : 사용 가능한 첫번째 빈 Memory 위치에 저장되며, 이전 Node에 Memory 위치의 주소를 저장하는 단 하나의 overhead만이 존재 = 삽입/삭제 연산이 빠름
+        - 장점 :  새로운 list 생성 시 남아있는 방의 갯수만 충족된다면 생성 가능
+        - 단점 : 특정 list의 지정된 elements를 찾는 시간이 오래걸린다.
+    - array list
+        - Size : node가 추가될 때 Runtime 시점에서 LinkedList size가 가변적으로 변함
+        - 메모리 할당 : Stack에 Memory 할당
+        - 특징 : 각 elements가 위치한 곳이 모여있다.
+        - 저장방식 : elements는 인접한 memory 위치에 저장되거나 memory에 연이어 저장됨
+        - 삽입/삭제 : memory 위치가 연속적이고 고정적이므로 많은 시간 소모
+        - 장점 : 특정 list가 모여있으므로 지정된 elements를 조회하는 시간이 빠르다.
+        - 단점 :  새로운 list 생성 시 연결된 방의 크기가 부족하면 생성할 수 없음
+
+ref
+
+[https://opentutorials.org/module/1335/8821](https://opentutorials.org/module/1335/8821)
+
+[https://medium.com/@audrl1010/linked-list-와-array-차이점-4ba873c2e5f5](https://medium.com/@audrl1010/linked-list-%EC%99%80-array-%EC%B0%A8%EC%9D%B4%EC%A0%90-4ba873c2e5f5)
+
+[https://junghyun100.github.io/힙-스택차이점/](https://junghyun100.github.io/%ED%9E%99-%EC%8A%A4%ED%83%9D%EC%B0%A8%EC%9D%B4%EC%A0%90/)
+
+[https://chokyuhwan.tistory.com/6](https://chokyuhwan.tistory.com/6)
+
+[https://medium.com/@audrl1010/linked-list-와-array-차이점-4ba873c2e5f5](https://medium.com/@audrl1010/linked-list-%EC%99%80-array-%EC%B0%A8%EC%9D%B4%EC%A0%90-4ba873c2e5f5)
+
+[https://opentutorials.org/module/1335/8821](https://opentutorials.org/module/1335/8821)
